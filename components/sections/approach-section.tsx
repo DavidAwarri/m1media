@@ -35,23 +35,17 @@ export function ApproachSection() {
   ]
 
   return (
-    <section id="approach" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 to-slate-950 -z-10">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-      </div>
-
+    <section id="approach" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <div className="flex items-center justify-center gap-3">
-            <div className="h-1 w-12 bg-gradient-to-r from-cyan-500 to-blue-500" />
-            <span className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Our Process</span>
-            <div className="h-1 w-12 bg-gradient-to-r from-blue-500 to-cyan-500" />
+            <div className="h-1 w-12 bg-blue-600" />
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">Our Process</span>
+            <div className="h-1 w-12 bg-blue-600" />
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-50">Our Approach</h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">A proven methodology that ensures successful outcomes</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-black">Our Approach</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">A proven methodology that ensures successful outcomes</p>
         </div>
 
         {/* Steps Timeline */}
@@ -62,23 +56,23 @@ export function ApproachSection() {
               <div key={idx} className="relative group">
                 {/* Connector line */}
                 {idx < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-16 -right-2 w-4 h-1 bg-gradient-to-r from-cyan-500 to-transparent" />
+                  <div className="hidden lg:block absolute top-16 -right-2 w-4 h-1 bg-blue-600" />
                 )}
 
-                <div className="p-6 h-full rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="p-6 h-full rounded-2xl border-2 border-blue-200 bg-white hover:border-blue-400 hover:shadow-md transition-all duration-300">
                   {/* Step number */}
-                  <div className="text-sm font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-3">
+                  <div className="text-sm font-bold text-blue-600 mb-3">
                     {step.number}
                   </div>
 
                   {/* Icon */}
-                  <div className="mb-4 inline-flex p-2 rounded-lg bg-cyan-500/20 border border-cyan-500/30">
-                    <Icon className="h-5 w-5 text-cyan-400" />
+                  <div className="mb-4 inline-flex p-2 rounded-lg bg-blue-50 border border-blue-200">
+                    <Icon className="h-5 w-5 text-blue-600" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-base font-bold text-slate-50 mb-1">{step.title}</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed">{step.description}</p>
+                  <h3 className="text-base font-bold text-black mb-1">{step.title}</h3>
+                  <p className="text-md text-gray-700 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             )

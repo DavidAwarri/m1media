@@ -79,7 +79,7 @@ export function ContactSection() {
       icon: MapPin,
       label: "Address",
       value: "C0, Penthouse Estate, Lugbe, Abuja.",
-      href: "https://maps.google.com",
+      // href: "https://maps.google.com",
     },
     {
       icon: Phone,
@@ -98,28 +98,22 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-cyan-950/20 to-slate-950 -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
-      </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <div className="flex items-center justify-center gap-3">
-            <div className="h-1 w-12 bg-gradient-to-r from-cyan-500 to-blue-500" />
-            <span className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">
+            <div className="h-1 w-12 bg-blue-600" />
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
               Get in Touch
             </span>
-            <div className="h-1 w-12 bg-gradient-to-r from-blue-500 to-cyan-500" />
+            <div className="h-1 w-12 bg-blue-600" />
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-50">
+          <h2 className="text-4xl lg:text-5xl font-bold text-black">
             Let's Create Something Great!
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ready to transform your organization with technology solutions?
           </p>
         </div>
@@ -132,23 +126,23 @@ export function ContactSection() {
               <a
                 key={idx}
                 href={info.href}
-                className="group relative p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20"
+                className="group relative p-8 rounded-2xl border-2 border-blue-200 bg-white hover:border-blue-400 transition-all duration-300 hover:shadow-md"
               >
                 {/* Icon */}
-                <div className="mb-4 inline-flex p-3 rounded-lg bg-cyan-500/20 border border-cyan-500/30 group-hover:scale-110 transition-transform">
-                  <Icon className="h-6 w-6 text-cyan-400" />
+                <div className="mb-4 inline-flex p-3 rounded-lg bg-blue-50 border border-blue-200 group-hover:scale-110 transition-transform">
+                  <Icon className="h-6 w-6 text-blue-600" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-2">
+                <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">
                   {info.label}
                 </h3>
-                <p className="text-slate-50 font-semibold text-lg mb-4">
+                <p className="text-black font-semibold text-lg mb-4">
                   {info.value}
                 </p>
 
                 {/* Hover indicator */}
-                <div className="flex items-center gap-2 text-cyan-400 text-sm group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-blue-600 text-sm group-hover:gap-3 transition-all">
                   <span>Connect</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -158,16 +152,14 @@ export function ContactSection() {
         </div>
 
         {/* Contact Form */}
-        <div className="relative p-12 rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm overflow-hidden">
-          {/* Animated background gradient */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10" />
+        <div className="relative p-12 rounded-2xl border-2 border-blue-200 bg-blue-50 overflow-hidden">
 
           <div className="relative z-10 space-y-6">
             <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold text-slate-50">
+              <h3 className="text-2xl font-bold text-black">
                 Send us a message
               </h3>
-              <p className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
                 Contact our team to discuss how M1 Media can help your
                 organization achieve digital transformation and operational
                 excellence. We're ready to partner with you on your technology
@@ -186,13 +178,13 @@ export function ContactSection() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-slate-300">
+                        <FormLabel className="text-gray-700">
                           Full Name *
                         </FormLabel>
                         <FormControl>
                           <Input
                             placeholder="Your full name"
-                            className="bg-slate-800/50 border-cyan-500/30 text-slate-50 placeholder:text-slate-400 focus:border-cyan-500"
+                            className="bg-white border-blue-300 text-black placeholder:text-gray-400 focus:border-blue-600"
                             {...field}
                           />
                         </FormControl>
@@ -205,14 +197,14 @@ export function ContactSection() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-slate-300">
+                        <FormLabel className="text-gray-700">
                           Email Address *
                         </FormLabel>
                         <FormControl>
                           <Input
                             type="email"
                             placeholder="your.email@example.com"
-                            className="bg-slate-800/50 border-cyan-500/30 text-slate-50 placeholder:text-slate-400 focus:border-cyan-500"
+                            className="bg-white border-blue-300 text-black placeholder:text-gray-400 focus:border-blue-600"
                             {...field}
                           />
                         </FormControl>
@@ -227,14 +219,14 @@ export function ContactSection() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-slate-300">
+                      <FormLabel className="text-gray-700">
                         Phone Number (Optional)
                       </FormLabel>
                       <FormControl>
                         <Input
                           type="tel"
                           placeholder="+1 (555) 123-4567"
-                          className="bg-slate-800/50 border-cyan-500/30 text-slate-50 placeholder:text-slate-400 focus:border-cyan-500"
+                          className="bg-white border-blue-300 text-black placeholder:text-gray-400 focus:border-blue-600"
                           {...field}
                         />
                       </FormControl>
@@ -248,13 +240,13 @@ export function ContactSection() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-slate-300">
+                      <FormLabel className="text-gray-700">
                         Message *
                       </FormLabel>
                       <FormControl>
                         <Textarea
                           placeholder="Tell us about your project or how we can help..."
-                          className="bg-slate-800/50 border-cyan-500/30 text-slate-50 placeholder:text-slate-400 focus:border-cyan-500 min-h-32"
+                          className="bg-white border-blue-300 text-black placeholder:text-gray-400 focus:border-blue-600 min-h-32"
                           {...field}
                         />
                       </FormControl>
@@ -267,7 +259,7 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-950 font-semibold rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/30 inline-flex items-center gap-2 disabled:opacity-50"
+                    className="group px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all duration-300 inline-flex items-center gap-2 disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>
@@ -288,8 +280,8 @@ export function ContactSection() {
         </div>
 
         {/* Footer */}
-        <div className="mt-16 pt-8 border-t border-cyan-500/10 text-center">
-          <p className="text-sm text-slate-400">
+        <div className="mt-16 pt-8 border-t border-gray-200 text-center">
+          <p className="text-sm text-gray-600">
             © {new Date().getFullYear()} M1 Media. Trusted Technology Solutions
             for Modern Organizations.
           </p>
