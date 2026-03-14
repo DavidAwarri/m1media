@@ -30,7 +30,7 @@ SMTP_SECURE=false
 SMTP_USER=your-email@gmail.com
 SMTP_PASS=your-app-password
 SMTP_FROM=your-email@gmail.com
-CONTACT_EMAIL=contact@m1media.net
+CONTACT_EMAIL=your-email@gmail.com
 ```
 
 ### Gmail Setup
